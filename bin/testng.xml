@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <listeners>
+    <listener class-name="com.volvo.gloria.resources.ExtentReporterNG" />
+  </listeners>
+  <test thread-count="1" name="Test">
+    <parameter name="userID" value="A238540" />
+    <classes>
+      <class name="com.volvo.gloria.CreateMaterialRequest.MaterialRequestPageTest" />
+      <class name="com.volvo.gloria.CreateMaterialRequest.MaterialRequestOverviewPageTest" />
+      <class name="com.volvo.gloria.CreateMaterialRequest.CreateNewMaterialRequestTest" />
+      <class name="com.volvo.gloria.Procurement.InboxTest" />
+      <class name="com.volvo.gloria.Procurement.ToProcurePageTest" />
+      <class name="com.volvo.gloria.Procurement.GetProcureDetailsTest" />
+      <class name="com.volvo.gloria.Procurement.GetProcuredTest" />
+      <class name="com.volvo.gloria.Procurement.GetProcuredDetailsTest" />
+      <class name="com.volvo.gloria.Procurement.GetModificationTest" />
+      <class name="com.volvo.gloria.Procurement.GetChangeTest" />
+      <class name="com.volvo.gloria.Procurement.AlarmQtyTest" />
+      <class name="com.volvo.gloria.Procurement.GetExceptionTest" />
+      <class name="com.volvo.gloria.Procurement.GetOnBuildSiteTest" />
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="1" name="Test2">
+    <parameter name="userID" value="A044096" />
+    <classes>
+      <class name="com.volvo.gloria.RequestListOverview.CreateRequestList" />
+      <class name="com.volvo.gloria.RequestListOverview.RequestListOverviewTest" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

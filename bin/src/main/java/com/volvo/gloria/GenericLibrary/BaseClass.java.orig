@@ -1,0 +1,82 @@
+package com.volvo.gloria.GenericLibrary;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+import static io.restassured.RestAssured.given;
+
+public class BaseClass {
+<<<<<<< HEAD
+    public static String sessionId;
+    public static String userName;
+    Logger log = Logger.getLogger(BaseClass.class);
+    public String MCuserID;
+    // public String teamName;
+=======
+public static String sessionId;
+Logger log = Logger.getLogger(BaseClass.class);
+public String MCuserID;
+public static String companyCode;
+//public String teamName;
+>>>>>>> 00815b2b2ba1eed8c2081a90d2e6f059f7fc98c9
+
+    public BaseClass() {
+        try {
+            // teamName = FileLibrary.getPropertyFileData("Team");
+            MCuserID = FileLibrary.getPropertyFileData("MCUSERID");
+            companyCode = FileLibrary.getPropertyFileData("companyCode");
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * http://gloria-qa.got.volvo.net/GloriaUIServices/api/user/v1/ldapusers/TIN3000?_=1582886757111
+     * 
+     */
+    @BeforeSuite
+    public void UserInfo() {
+
+    }
+
+    /**
+     * Test This method will run before ever test which will login to the application and capture the Session ID.
+     * 
+     * @throws Throwable
+     */
+    private static void init() {
+        PropertyConfigurator.configure("log4j.properties");
+    }
+
+    @BeforeTest
+    public void login() throws Throwable {
+        log.info("*****************Test Case Started***********************");
+        RestAssured.baseURI = FileLibrary.getPropertyFileData("HOST");
+
+        ValidatableResponse responseBody = given().param("userId", MCuserID).when().get("/GloriaUIServices/api/usertest/v1/login").then().assertThat()
+                                                  .statusCode(200);
+        String resp = responseBody.extract().asString();
+        JsonPath json = CommonLibrary.rawToJSON(resp);
+        String firstName = json.get("firstName");
+        String lastName = json.get("lastName");
+        userName = firstName+" "+lastName;
+        sessionId = "JSESSIONID=" + responseBody.extract().response().cookie("JSESSIONID");
+        log.info("JSESSIONID is " + sessionId);
+        System.out.println(sessionId);
+        System.out.println(userName);
+
+    }
+
+    @AfterTest
+    public void logout() {
+        log.info("*****************Test Case Executed***********************");
+    }
+}

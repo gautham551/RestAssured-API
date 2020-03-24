@@ -1,0 +1,410 @@
+<html>
+<head>
+<title>TestNG:  Test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Mar 06 19:37:21 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>4 seconds (4233 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.CreateRequestList.GETCreateRequestList()'><b>GETCreateRequestList</b><br>Test class: com.volvo.gloria.RequestListOverview.CreateRequestList</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.volvo.gloria.RequestListOverview.CreateRequestList.GETCreateRequestList(CreateRequestList.java:80)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace199000084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace199000084'><pre>java.lang.NullPointerException
+	at com.volvo.gloria.RequestListOverview.CreateRequestList.GETCreateRequestList(CreateRequestList.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.CreateRequestList@63440df3</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.CreateRequestList.GETRoles()'><b>GETRoles</b><br>Test class: com.volvo.gloria.RequestListOverview.CreateRequestList</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.CreateRequestList.GETRoles(CreateRequestList.java:96)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2028510206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2028510206'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+	at sun.reflect.GeneratedConstructorAccessor69.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.GeneratedMethodAccessor64.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.CreateRequestList.GETRoles(CreateRequestList.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.CreateRequestList@63440df3</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewSites()'><b>GetRequestListOverviewSites</b><br>Test class: com.volvo.gloria.RequestListOverview.RequestListOverviewTest</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewSites(RequestListOverviewTest.java:72)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace182678201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace182678201'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+	at sun.reflect.GeneratedConstructorAccessor69.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.GeneratedMethodAccessor64.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewSites(RequestListOverviewTest.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.RequestListOverviewTest@3aeaafa6</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewWarehouse()'><b>GetRequestListOverviewWarehouse</b><br>Test class: com.volvo.gloria.RequestListOverview.RequestListOverviewTest</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: a string containing &quot;[{\&quot;id\&quot;:14,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:13,\&quot;siteId\&quot;:\&quot;47941\&quot;,\&quot;siteCode\&quot;:\&quot;Camrett\&quot;,\&quot;siteName\&quot;:\&quot;Camrett\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US10\&quot;,\&quot;address\&quot;:\&quot;Camrett Logistics, 6540 Viscoe Road,Radford,VA 24141\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:8,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:6,\&quot;siteId\&quot;:\&quot;8374\&quot;,\&quot;siteCode\&quot;:\&quot;AGE PT\&quot;,\&quot;siteName\&quot;:\&quot;GTO Ageo Eng Assy plant/GTT Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;JP\&quot;,\&quot;companyCode\&quot;:\&quot;JP40\&quot;,\&quot;address\&quot;:\&quot;Street 1-1 Postal Code 362-8523, AGEO-SHI\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:15,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:24,\&quot;siteId\&quot;:\&quot;37837\&quot;,\&quot;siteCode\&quot;:\&quot;37837\&quot;,\&quot;siteName\&quot;:\&quot;GTT Australia proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;AU\&quot;,\&quot;companyCode\&quot;:\&quot;AU04\&quot;,\&quot;address\&quot;:\&quot;Volvo Group Trucks Technology,36 Viking Drive,Wacol QLD 4076, Australia\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:3,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;36012\&quot;,\&quot;siteCode\&quot;:\&quot;BL Gare X2\&quot;,\&quot;siteName\&quot;:\&quot;GTT Blainville Gare X2\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;rue du Canal, 14550, BLAINVILLE-SUR-ORNE\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:6,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:2,\&quot;siteId\&quot;:\&quot;47670\&quot;,\&quot;siteCode\&quot;:\&quot;CUR BLCW\&quot;,\&quot;siteName\&quot;:\&quot;GTT Curitiba Prototype Warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;BR\&quot;,\&quot;companyCode\&quot;:\&quot;BR03\&quot;,\&quot;address\&quot;:\&quot;Av. Juscelino K de Oliveira, 2600, CURITIBA\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:13,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;4042\&quot;,\&quot;siteCode\&quot;:\&quot;GSO\&quot;,\&quot;siteName\&quot;:\&quot;GTT Greensboro Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US10\&quot;,\&quot;address\&quot;:\&quot;661 Brigham Road, Suite 100, NC-27409, Greensboro,United States\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:7,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:5,\&quot;siteId\&quot;:\&quot;45907\&quot;,\&quot;siteCode\&quot;:\&quot;HAG PP\&quot;,\&quot;siteName\&quot;:\&quot;GTT Hagerstown Proto warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US45\&quot;,\&quot;address\&quot;:\&quot;Drop Area B-3, 13302 Pennsylvania Avenue, 21742 HAGERSTOWN\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:5,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:3,\&quot;siteId\&quot;:\&quot;42102\&quot;,\&quot;siteCode\&quot;:\&quot;GTT BLR\&quot;,\&quot;siteName\&quot;:\&quot;GTT Hoskote Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;IN\&quot;,\&quot;companyCode\&quot;:\&quot;IN01\&quot;,\&quot;address\&quot;:\&quot;Yalachahally,Taverekere Post, Hosakote\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:10,\&quot;version\&quot;:8,\&quot;defaultPrinter\&quot;:16,\&quot;siteId\&quot;:\&quot;1722\&quot;,\&quot;siteCode\&quot;:\&quot;PE Lundby\&quot;,\&quot;siteName\&quot;:\&quot;GTT Lundby (O, UV) Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Lundby \&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:12,\&quot;version\&quot;:3,\&quot;defaultPrinter\&quot;:14,\&quot;siteId\&quot;:\&quot;664\&quot;,\&quot;siteCode\&quot;:\&quot;N5\&quot;,\&quot;siteName\&quot;:\&quot;GTT Lundby, Prototype warehouse (N5)\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvo Trucks Corperation, GTT Lundby, Prototype warehouse N5/187 John Bunyans v?g 3, SE-41729, G?teborg Sweden\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:11,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:10,\&quot;siteId\&quot;:\&quot;2919\&quot;,\&quot;siteCode\&quot;:\&quot;MAL\&quot;,\&quot;siteName\&quot;:\&quot;GTT Malm? Prototype workshop\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvo Powertrain AB, J?gershillgatan 22, 213 75 MALM?\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:2,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:1,\&quot;siteId\&quot;:\&quot;34347\&quot;,\&quot;siteCode\&quot;:\&quot;LY Gare 54\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare 54 Prototype warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;1 Av Henri Germain Postal Code 69802 SAINT-PRIEST CEDEX\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:1,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;34331\&quot;,\&quot;siteCode\&quot;:\&quot;LY GARE 55\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare 55\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;Renault trucks gare 55, 99 route de Lyon, 69806, SAINT PRIEST\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:4,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;40382\&quot;,\&quot;siteCode\&quot;:\&quot;LY Gare C8\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare C8\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;Renault Trucks gare C8, 99 route de Lyon, 69806, SAINT PRIEST\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:9,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:9,\&quot;siteId\&quot;:\&quot;1620\&quot;,\&quot;siteCode\&quot;:\&quot;SKO PP\&quot;,\&quot;siteName\&quot;:\&quot;GTT Sk?vde Proto\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvov?gen 5 F-Port, 541 87 SK?VDE\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true}]&quot;
+  Actual: [{&quot;id&quot;:14,&quot;version&quot;:2,&quot;defaultPrinter&quot;:13,&quot;siteId&quot;:&quot;47941&quot;,&quot;siteCode&quot;:&quot;Camrett&quot;,&quot;siteName&quot;:&quot;Camrett&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US10&quot;,&quot;address&quot;:&quot;Camrett Logistics, 6540 Viscoe Road,Radford,VA 24141&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:8,&quot;version&quot;:2,&quot;defaultPrinter&quot;:6,&quot;siteId&quot;:&quot;8374&quot;,&quot;siteCode&quot;:&quot;AGE PT&quot;,&quot;siteName&quot;:&quot;GTO Ageo Eng Assy plant/GTT Proto WS&quot;,&quot;countryCode&quot;:&quot;JP&quot;,&quot;companyCode&quot;:&quot;JP40&quot;,&quot;address&quot;:&quot;Street 1-1 Postal Code 362-8523, AGEO-SHI&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:15,&quot;version&quot;:1,&quot;defaultPrinter&quot;:24,&quot;siteId&quot;:&quot;37837&quot;,&quot;siteCode&quot;:&quot;37837&quot;,&quot;siteName&quot;:&quot;GTT Australia proto WS&quot;,&quot;countryCode&quot;:&quot;AU&quot;,&quot;companyCode&quot;:&quot;AU04&quot;,&quot;address&quot;:&quot;Volvo Group Trucks Technology,36 Viking Drive,Wacol QLD 4076, Australia&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:3,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;36012&quot;,&quot;siteCode&quot;:&quot;BL Gare X2&quot;,&quot;siteName&quot;:&quot;GTT Blainville Gare X2&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;rue du Canal, 14550, BLAINVILLE-SUR-ORNE&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:6,&quot;version&quot;:2,&quot;defaultPrinter&quot;:2,&quot;siteId&quot;:&quot;47670&quot;,&quot;siteCode&quot;:&quot;CUR BLCW&quot;,&quot;siteName&quot;:&quot;GTT Curitiba Prototype Warehouse&quot;,&quot;countryCode&quot;:&quot;BR&quot;,&quot;companyCode&quot;:&quot;BR03&quot;,&quot;address&quot;:&quot;Av. Juscelino K de Oliveira, 2600, CURITIBA&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:13,&quot;version&quot;:2,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;4042&quot;,&quot;siteCode&quot;:&quot;GSO&quot;,&quot;siteName&quot;:&quot;GTT Greensboro Proto WS&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US10&quot;,&quot;address&quot;:&quot;661 Brigham Road, Suite 100, NC-27409, Greensboro,United States&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:7,&quot;version&quot;:2,&quot;defaultPrinter&quot;:5,&quot;siteId&quot;:&quot;45907&quot;,&quot;siteCode&quot;:&quot;HAG PP&quot;,&quot;siteName&quot;:&quot;GTT Hagerstown Proto warehouse&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US45&quot;,&quot;address&quot;:&quot;Drop Area B-3, 13302 Pennsylvania Avenue, 21742 HAGERSTOWN&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:5,&quot;version&quot;:2,&quot;defaultPrinter&quot;:3,&quot;siteId&quot;:&quot;42102&quot;,&quot;siteCode&quot;:&quot;GTT BLR&quot;,&quot;siteName&quot;:&quot;GTT Hoskote Proto WS&quot;,&quot;countryCode&quot;:&quot;IN&quot;,&quot;companyCode&quot;:&quot;IN01&quot;,&quot;address&quot;:&quot;Yalachahally,Taverekere Post, Hosakote&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:10,&quot;version&quot;:8,&quot;defaultPrinter&quot;:16,&quot;siteId&quot;:&quot;1722&quot;,&quot;siteCode&quot;:&quot;PE Lundby&quot;,&quot;siteName&quot;:&quot;GTT Lundby (O, UV) Proto WS&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Lundby &quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:12,&quot;version&quot;:3,&quot;defaultPrinter&quot;:14,&quot;siteId&quot;:&quot;664&quot;,&quot;siteCode&quot;:&quot;N5&quot;,&quot;siteName&quot;:&quot;GTT Lundby, Prototype warehouse (N5)&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvo Trucks Corperation, GTT Lundby, Prototype warehouse N5/187 John Bunyans väg 3, SE-41729, Göteborg Sweden&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:11,&quot;version&quot;:2,&quot;defaultPrinter&quot;:10,&quot;siteId&quot;:&quot;2919&quot;,&quot;siteCode&quot;:&quot;MAL&quot;,&quot;siteName&quot;:&quot;GTT Malmö Prototype workshop&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvo Powertrain AB, Jägershillgatan 22, 213 75 MALMÖ&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:2,&quot;version&quot;:2,&quot;defaultPrinter&quot;:1,&quot;siteId&quot;:&quot;34347&quot;,&quot;siteCode&quot;:&quot;LY Gare 54&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare 54 Prototype warehouse&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;1 Av Henri Germain Postal Code 69802 SAINT-PRIEST CEDEX&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:1,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;34331&quot;,&quot;siteCode&quot;:&quot;LY GARE 55&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare 55&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;Renault trucks gare 55, 99 route de Lyon, 69806, SAINT PRIEST&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:4,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;40382&quot;,&quot;siteCode&quot;:&quot;LY Gare C8&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare C8&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;Renault Trucks gare C8, 99 route de Lyon, 69806, SAINT PRIEST&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:9,&quot;version&quot;:2,&quot;defaultPrinter&quot;:9,&quot;siteId&quot;:&quot;1620&quot;,&quot;siteCode&quot;:&quot;SKO PP&quot;,&quot;siteName&quot;:&quot;GTT Skövde Proto&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvovägen 5 F-Port, 541 87 SKÖVDE&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewWarehouse(RequestListOverviewTest.java:35)
+... Removed 38 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916720513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916720513'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: a string containing &quot;[{\&quot;id\&quot;:14,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:13,\&quot;siteId\&quot;:\&quot;47941\&quot;,\&quot;siteCode\&quot;:\&quot;Camrett\&quot;,\&quot;siteName\&quot;:\&quot;Camrett\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US10\&quot;,\&quot;address\&quot;:\&quot;Camrett Logistics, 6540 Viscoe Road,Radford,VA 24141\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:8,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:6,\&quot;siteId\&quot;:\&quot;8374\&quot;,\&quot;siteCode\&quot;:\&quot;AGE PT\&quot;,\&quot;siteName\&quot;:\&quot;GTO Ageo Eng Assy plant/GTT Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;JP\&quot;,\&quot;companyCode\&quot;:\&quot;JP40\&quot;,\&quot;address\&quot;:\&quot;Street 1-1 Postal Code 362-8523, AGEO-SHI\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:15,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:24,\&quot;siteId\&quot;:\&quot;37837\&quot;,\&quot;siteCode\&quot;:\&quot;37837\&quot;,\&quot;siteName\&quot;:\&quot;GTT Australia proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;AU\&quot;,\&quot;companyCode\&quot;:\&quot;AU04\&quot;,\&quot;address\&quot;:\&quot;Volvo Group Trucks Technology,36 Viking Drive,Wacol QLD 4076, Australia\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:3,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;36012\&quot;,\&quot;siteCode\&quot;:\&quot;BL Gare X2\&quot;,\&quot;siteName\&quot;:\&quot;GTT Blainville Gare X2\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;rue du Canal, 14550, BLAINVILLE-SUR-ORNE\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:6,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:2,\&quot;siteId\&quot;:\&quot;47670\&quot;,\&quot;siteCode\&quot;:\&quot;CUR BLCW\&quot;,\&quot;siteName\&quot;:\&quot;GTT Curitiba Prototype Warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;BR\&quot;,\&quot;companyCode\&quot;:\&quot;BR03\&quot;,\&quot;address\&quot;:\&quot;Av. Juscelino K de Oliveira, 2600, CURITIBA\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:13,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;4042\&quot;,\&quot;siteCode\&quot;:\&quot;GSO\&quot;,\&quot;siteName\&quot;:\&quot;GTT Greensboro Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US10\&quot;,\&quot;address\&quot;:\&quot;661 Brigham Road, Suite 100, NC-27409, Greensboro,United States\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:7,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:5,\&quot;siteId\&quot;:\&quot;45907\&quot;,\&quot;siteCode\&quot;:\&quot;HAG PP\&quot;,\&quot;siteName\&quot;:\&quot;GTT Hagerstown Proto warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;US\&quot;,\&quot;companyCode\&quot;:\&quot;US45\&quot;,\&quot;address\&quot;:\&quot;Drop Area B-3, 13302 Pennsylvania Avenue, 21742 HAGERSTOWN\&quot;,\&quot;setUp\&quot;:\&quot;AISLE\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:5,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:3,\&quot;siteId\&quot;:\&quot;42102\&quot;,\&quot;siteCode\&quot;:\&quot;GTT BLR\&quot;,\&quot;siteName\&quot;:\&quot;GTT Hoskote Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;IN\&quot;,\&quot;companyCode\&quot;:\&quot;IN01\&quot;,\&quot;address\&quot;:\&quot;Yalachahally,Taverekere Post, Hosakote\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:10,\&quot;version\&quot;:8,\&quot;defaultPrinter\&quot;:16,\&quot;siteId\&quot;:\&quot;1722\&quot;,\&quot;siteCode\&quot;:\&quot;PE Lundby\&quot;,\&quot;siteName\&quot;:\&quot;GTT Lundby (O, UV) Proto WS\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Lundby \&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:12,\&quot;version\&quot;:3,\&quot;defaultPrinter\&quot;:14,\&quot;siteId\&quot;:\&quot;664\&quot;,\&quot;siteCode\&quot;:\&quot;N5\&quot;,\&quot;siteName\&quot;:\&quot;GTT Lundby, Prototype warehouse (N5)\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvo Trucks Corperation, GTT Lundby, Prototype warehouse N5/187 John Bunyans v?g 3, SE-41729, G?teborg Sweden\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:11,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:10,\&quot;siteId\&quot;:\&quot;2919\&quot;,\&quot;siteCode\&quot;:\&quot;MAL\&quot;,\&quot;siteName\&quot;:\&quot;GTT Malm? Prototype workshop\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvo Powertrain AB, J?gershillgatan 22, 213 75 MALM?\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:2,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:1,\&quot;siteId\&quot;:\&quot;34347\&quot;,\&quot;siteCode\&quot;:\&quot;LY Gare 54\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare 54 Prototype warehouse\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;1 Av Henri Germain Postal Code 69802 SAINT-PRIEST CEDEX\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true},{\&quot;id\&quot;:1,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;34331\&quot;,\&quot;siteCode\&quot;:\&quot;LY GARE 55\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare 55\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;Renault trucks gare 55, 99 route de Lyon, 69806, SAINT PRIEST\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:4,\&quot;version\&quot;:1,\&quot;defaultPrinter\&quot;:0,\&quot;siteId\&quot;:\&quot;40382\&quot;,\&quot;siteCode\&quot;:\&quot;LY Gare C8\&quot;,\&quot;siteName\&quot;:\&quot;GTT Saint-Priest Gare C8\&quot;,\&quot;countryCode\&quot;:\&quot;FR\&quot;,\&quot;companyCode\&quot;:\&quot;FR46\&quot;,\&quot;address\&quot;:\&quot;Renault Trucks gare C8, 99 route de Lyon, 69806, SAINT PRIEST\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:false},{\&quot;id\&quot;:9,\&quot;version\&quot;:2,\&quot;defaultPrinter\&quot;:9,\&quot;siteId\&quot;:\&quot;1620\&quot;,\&quot;siteCode\&quot;:\&quot;SKO PP\&quot;,\&quot;siteName\&quot;:\&quot;GTT Sk?vde Proto\&quot;,\&quot;countryCode\&quot;:\&quot;SE\&quot;,\&quot;companyCode\&quot;:\&quot;SE04\&quot;,\&quot;address\&quot;:\&quot;Volvov?gen 5 F-Port, 541 87 SK?VDE\&quot;,\&quot;setUp\&quot;:\&quot;ROW\&quot;,\&quot;qiSupported\&quot;:true}]&quot;
+  Actual: [{&quot;id&quot;:14,&quot;version&quot;:2,&quot;defaultPrinter&quot;:13,&quot;siteId&quot;:&quot;47941&quot;,&quot;siteCode&quot;:&quot;Camrett&quot;,&quot;siteName&quot;:&quot;Camrett&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US10&quot;,&quot;address&quot;:&quot;Camrett Logistics, 6540 Viscoe Road,Radford,VA 24141&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:8,&quot;version&quot;:2,&quot;defaultPrinter&quot;:6,&quot;siteId&quot;:&quot;8374&quot;,&quot;siteCode&quot;:&quot;AGE PT&quot;,&quot;siteName&quot;:&quot;GTO Ageo Eng Assy plant/GTT Proto WS&quot;,&quot;countryCode&quot;:&quot;JP&quot;,&quot;companyCode&quot;:&quot;JP40&quot;,&quot;address&quot;:&quot;Street 1-1 Postal Code 362-8523, AGEO-SHI&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:15,&quot;version&quot;:1,&quot;defaultPrinter&quot;:24,&quot;siteId&quot;:&quot;37837&quot;,&quot;siteCode&quot;:&quot;37837&quot;,&quot;siteName&quot;:&quot;GTT Australia proto WS&quot;,&quot;countryCode&quot;:&quot;AU&quot;,&quot;companyCode&quot;:&quot;AU04&quot;,&quot;address&quot;:&quot;Volvo Group Trucks Technology,36 Viking Drive,Wacol QLD 4076, Australia&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:3,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;36012&quot;,&quot;siteCode&quot;:&quot;BL Gare X2&quot;,&quot;siteName&quot;:&quot;GTT Blainville Gare X2&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;rue du Canal, 14550, BLAINVILLE-SUR-ORNE&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:6,&quot;version&quot;:2,&quot;defaultPrinter&quot;:2,&quot;siteId&quot;:&quot;47670&quot;,&quot;siteCode&quot;:&quot;CUR BLCW&quot;,&quot;siteName&quot;:&quot;GTT Curitiba Prototype Warehouse&quot;,&quot;countryCode&quot;:&quot;BR&quot;,&quot;companyCode&quot;:&quot;BR03&quot;,&quot;address&quot;:&quot;Av. Juscelino K de Oliveira, 2600, CURITIBA&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:13,&quot;version&quot;:2,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;4042&quot;,&quot;siteCode&quot;:&quot;GSO&quot;,&quot;siteName&quot;:&quot;GTT Greensboro Proto WS&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US10&quot;,&quot;address&quot;:&quot;661 Brigham Road, Suite 100, NC-27409, Greensboro,United States&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:7,&quot;version&quot;:2,&quot;defaultPrinter&quot;:5,&quot;siteId&quot;:&quot;45907&quot;,&quot;siteCode&quot;:&quot;HAG PP&quot;,&quot;siteName&quot;:&quot;GTT Hagerstown Proto warehouse&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;companyCode&quot;:&quot;US45&quot;,&quot;address&quot;:&quot;Drop Area B-3, 13302 Pennsylvania Avenue, 21742 HAGERSTOWN&quot;,&quot;setUp&quot;:&quot;AISLE&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:5,&quot;version&quot;:2,&quot;defaultPrinter&quot;:3,&quot;siteId&quot;:&quot;42102&quot;,&quot;siteCode&quot;:&quot;GTT BLR&quot;,&quot;siteName&quot;:&quot;GTT Hoskote Proto WS&quot;,&quot;countryCode&quot;:&quot;IN&quot;,&quot;companyCode&quot;:&quot;IN01&quot;,&quot;address&quot;:&quot;Yalachahally,Taverekere Post, Hosakote&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:10,&quot;version&quot;:8,&quot;defaultPrinter&quot;:16,&quot;siteId&quot;:&quot;1722&quot;,&quot;siteCode&quot;:&quot;PE Lundby&quot;,&quot;siteName&quot;:&quot;GTT Lundby (O, UV) Proto WS&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Lundby &quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:12,&quot;version&quot;:3,&quot;defaultPrinter&quot;:14,&quot;siteId&quot;:&quot;664&quot;,&quot;siteCode&quot;:&quot;N5&quot;,&quot;siteName&quot;:&quot;GTT Lundby, Prototype warehouse (N5)&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvo Trucks Corperation, GTT Lundby, Prototype warehouse N5/187 John Bunyans väg 3, SE-41729, Göteborg Sweden&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:11,&quot;version&quot;:2,&quot;defaultPrinter&quot;:10,&quot;siteId&quot;:&quot;2919&quot;,&quot;siteCode&quot;:&quot;MAL&quot;,&quot;siteName&quot;:&quot;GTT Malmö Prototype workshop&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvo Powertrain AB, Jägershillgatan 22, 213 75 MALMÖ&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:2,&quot;version&quot;:2,&quot;defaultPrinter&quot;:1,&quot;siteId&quot;:&quot;34347&quot;,&quot;siteCode&quot;:&quot;LY Gare 54&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare 54 Prototype warehouse&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;1 Av Henri Germain Postal Code 69802 SAINT-PRIEST CEDEX&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true},{&quot;id&quot;:1,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;34331&quot;,&quot;siteCode&quot;:&quot;LY GARE 55&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare 55&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;Renault trucks gare 55, 99 route de Lyon, 69806, SAINT PRIEST&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:4,&quot;version&quot;:1,&quot;defaultPrinter&quot;:0,&quot;siteId&quot;:&quot;40382&quot;,&quot;siteCode&quot;:&quot;LY Gare C8&quot;,&quot;siteName&quot;:&quot;GTT Saint-Priest Gare C8&quot;,&quot;countryCode&quot;:&quot;FR&quot;,&quot;companyCode&quot;:&quot;FR46&quot;,&quot;address&quot;:&quot;Renault Trucks gare C8, 99 route de Lyon, 69806, SAINT PRIEST&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:false},{&quot;id&quot;:9,&quot;version&quot;:2,&quot;defaultPrinter&quot;:9,&quot;siteId&quot;:&quot;1620&quot;,&quot;siteCode&quot;:&quot;SKO PP&quot;,&quot;siteName&quot;:&quot;GTT Skövde Proto&quot;,&quot;countryCode&quot;:&quot;SE&quot;,&quot;companyCode&quot;:&quot;SE04&quot;,&quot;address&quot;:&quot;Volvovägen 5 F-Port, 541 87 SKÖVDE&quot;,&quot;setUp&quot;:&quot;ROW&quot;,&quot;qiSupported&quot;:true}]
+
+	at sun.reflect.GeneratedConstructorAccessor69.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.GeneratedMethodAccessor64.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewWarehouse(RequestListOverviewTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.RequestListOverviewTest@3aeaafa6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.CreateRequestList.GETDeliveryInformationTest()'><b>GETDeliveryInformationTest</b><br>Test class: com.volvo.gloria.RequestListOverview.CreateRequestList</td>
+<td></td>
+<td>1</td>
+<td>com.volvo.gloria.RequestListOverview.CreateRequestList@63440df3</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.CreateRequestList.GETMaterialLineTest()'><b>GETMaterialLineTest</b><br>Test class: com.volvo.gloria.RequestListOverview.CreateRequestList</td>
+<td></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.CreateRequestList@63440df3</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.RequestListOverviewTest.GetRequestListOverviewPage()'><b>GetRequestListOverviewPage</b><br>Test class: com.volvo.gloria.RequestListOverview.RequestListOverviewTest</td>
+<td></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.RequestListOverviewTest@3aeaafa6</td></tr>
+<tr>
+<td title='com.volvo.gloria.RequestListOverview.CreateRequestList.POSTSendRequestList()'><b>POSTSendRequestList</b><br>Test class: com.volvo.gloria.RequestListOverview.CreateRequestList</td>
+<td></td>
+<td>0</td>
+<td>com.volvo.gloria.RequestListOverview.CreateRequestList@63440df3</td></tr>
+</table><p>
+</body>
+</html>

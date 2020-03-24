@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.volvo.gloria.resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.volvo.gloria.Procurement.AlarmQtyTest">
+        <methods>
+          <include name="GETProcurementAlarmQtyStockBalanceLines" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.volvo.gloria.Procurement.AlarmQtyTest -->
+      <class name="com.volvo.gloria.Procurement.GetProcureDetailsTest">
+        <methods>
+          <include name="GETProcureLineDetailsTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.volvo.gloria.Procurement.GetProcureDetailsTest -->
+      <class name="com.volvo.gloria.Procurement.ToProcurePageTest">
+        <methods>
+          <include name="POSTProcurementTest"/>
+          <include name="GETProcureLinewithMTRID"/>
+          <include name="GetToProcureFlagsTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="GETMaterialfromProcurelinesTest"/>
+          <include name="POSTMaterialfromProcurelinesTest"/>
+          <include name="GetToProcureTeamsTest" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.volvo.gloria.Procurement.ToProcurePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="com.volvo.gloria.RequestListOverview.CreateRequestList">
+        <methods>
+          <include name="LoginMC"/>
+          <include name="GETRoles"/>
+          <include name="setUp"/>
+          <include name="GETCreateRequestList"/>
+        </methods>
+      </class> <!-- com.volvo.gloria.RequestListOverview.CreateRequestList -->
+      <class name="com.volvo.gloria.RequestListOverview.RequestListOverviewTest">
+        <methods>
+          <include name="GetRequestListOverviewSites"/>
+          <include name="GetRequestListOverviewWarehouse"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.volvo.gloria.RequestListOverview.RequestListOverviewTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
